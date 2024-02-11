@@ -1,13 +1,13 @@
-.card {
-    span {
-        display: block;
-    }
-}
+$media-breakpoint: 768px;
 
-@media (max-width: 768px) {
-    .card {
-        span {
-            display: none;
-        }
+.card {
+  span {
+    display: block;
+  }
+
+  @media (max-width: $media-breakpoint) {
+    span {
+      display: none;
     }
+  }
 }

@@ -1,45 +1,30 @@
+// Base typography
+$font-family: 'Roboto', sans-serif;
+
+// Base colors
+$form-background: #BFE1FF;
+
+// Padding & spacing (for easier modification)
+$section-padding: 20px;
+$input-padding: 13px;
+$input-padding-right: 170px;
+$input-margin-bottom: 16px;
+$inputs-margin: 6%;
+$content-margin-left: 7.5%;
+$content-margin-top: 2%;
+
+// Screen size breakpoint
+$mobile-breakpoint: 768px;
+
 .section {
     display: flex;
-    font-family: 'Roboto', sans-serif;
+    font-family: $font-family;
+    padding: $section-padding;
 
-    input {
-        border: none;
-        margin-bottom: 16px;
-        box-sizing: border-box;
+    @media (max-width: $mobile-breakpoint) {
         display: block;
-        padding: 13px;
-        padding-right: 170px;
-        border-radius: 5px;
-    }
-}
-
-.form {
-    background-color: #BFE1FF;
-    width: 50%;
-}
-
-.inputs {
-    margin-top: 6%;
-    margin-bottom: 6%;
-    margin-left: 33%;
-}
-
-.content {
-    margin-left: 7.5%;
-    margin-top: 2%;
-}
-
-.mobileContent {
-    display: none;
-}
-
-@media (max-width: 768px) {
-    .section {
-        display: block;
-        padding: 20px;
 
         input {
-
             padding-right: 10px;
             justify-content: center;
             align-items: center;
@@ -47,20 +32,52 @@
         }
     }
 
-    .form {
+    input {
+        border: none;
+        margin-bottom: $input-margin-bottom;
+        box-sizing: border-box;
+        display: block;
+        padding: $input-padding;
+        padding-right: $input-padding-right;
+        border-radius: 5px;
+    }
+}
+
+.form {
+    background-color: $form-background;
+    width: 50%;
+
+    @media (max-width: $mobile-breakpoint) {
         width: 100%;
         padding: 10px;
     }
+}
 
-    .mobileContent {
+.inputs {
+    margin: $inputs-margin;
+
+    @media (max-width: $mobile-breakpoint) {
+        margin: 0;
+    }
+}
+
+.content {
+    margin-left: $content-margin-left;
+    margin-top: $content-margin-top;
+
+    @media (max-width: $mobile-breakpoint) {
+        display: none;
+    }
+}
+
+.mobileContent {
+    display: none;
+
+    @media (max-width: $mobile-breakpoint) {
         display: block;
     }
 
     .mobileContentbutton {
         color: black;
-    }
-
-    .content {
-        display: none;
     }
 }

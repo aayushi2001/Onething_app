@@ -1,67 +1,79 @@
+// Base colors
+$hero-background-gradient: linear-gradient(to bottom, var(--color-grey-900), var(--color-grey-800));
+$button-background: #F2707C;
+$button-text-color: white;
+
+// Base spacing
+$base-spacing: var(--size-8);
+
+// Base typography
+$font-family: 'Roboto', sans-serif;
+
+// Breakpoint
+$mobile-breakpoint: 768px;
+
 .hero {
   text-align: center;
-  background-image: linear-gradient(to bottom,
-      var(--color-grey-900),
-      var(--color-grey-800));
-  padding: var(--size-8) 0;
+  background-image: $hero-background-gradient;
+  padding: $base-spacing 0;
   display: flex;
   justify-content: flex-start;
-  font-family: 'Roboto', sans-serif;
-}
+  font-family: $font-family;
 
-.content {
-  margin-left: 13%;
-  margin-top: 9%;
-  text-align: left;
-}
+  h1 {
+    margin: $base-spacing 0;
+  }
 
-.image {
-  width: 32%;
-  height: 30%;
-  background-color: var(--color-grey-700);
-  margin: auto;
-  margin-top: 2%;
-}
-
-.image img {
-  width: 100%;
-  height: 100%;
-}
-
-.hero h1 {
-  margin: var(--size-4) 0;
-}
-
-.hero p {
-  width: 90%;
-  max-width: 40rem;
-}
-
-.button {
-  background-color: #F2707C;
-  padding: 8px 40px;
-  border: none;
-  border-radius: 30px;
-  color: white;
-  width: 172px;
-  height: 43px;
-}
-
-.contentTwo {
-  padding: 0;
-}
-
-@media (max-width: 768px) {
-  .hero {
-    display: block;
+  p {
+    width: 90%;
+    max-width: 40rem;
   }
 
   .content {
-    text-align: center;
-    margin-right: 22px;
+    margin-left: 13%;
+    margin-top: 9%;
+    text-align: left;
+
+    @media (max-width: $mobile-breakpoint) {
+      text-align: center;
+      margin-right: 22px;
+    }
   }
 
   .image {
-    width: 100%;
+    width: 32%;
+    height: 30%;
+    background-color: var(--color-grey-700);
+    margin: auto;
+    margin-top: 2%;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    @media (max-width: $mobile-breakpoint) {
+      width: 100%;
+    }
+  }
+
+  .button {
+    background-color: $button-background;
+    padding: 8px 40px;
+    border: none;
+    border-radius: 30px;
+    color: $button-text-color;
+    width: 172px;
+    height: 43px;
+  }
+
+  .contentTwo {
+    padding: 0;
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .hero {
+    display: block;
   }
 }

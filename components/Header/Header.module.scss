@@ -1,62 +1,56 @@
-.header a {
-  color: #333;
-  margin-right: 20px;
-  text-decoration: none;
-}
+// Base colors
+$header-background: #fff;
+$header-text-color: #333;
+$button-background: #F2707C;
+$button-text-color: white;
+$dropdown-background: #fff;
+$dropdown-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 
-.header ul {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  list-style: none;
-}
+// Base typography
+$font-family: 'Roboto', sans-serif;
 
-.logo a {
-  background-color: black;
-  color: white;
-  font-size: 20px;
-  text-transform: uppercase;
-  padding: 10px;
-  text-decoration: none;
-}
-
-.logo {
-  margin-left: 12%;
-}
-
-.button {
-  background: #F2707C;
-  padding: 8px 24px;
-  border: none;
-  border-radius: 3px;
-  color: white;
-}
-
-@media (max-width: 768px) {
-  .undrop {
-    display: none;
-  }
-}
+// Breakpoint
+$mobile-breakpoint: 768px;
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #fff;
-  color: #333;
+  background: $header-background;
+  color: $header-text-color;
   height: 60px;
   padding: 0 30px;
-  font-family: 'Roboto', sans-serif;
+  font-family: $font-family;
+
+  a {
+    color: $header-text-color;
+    text-decoration: none;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
 
   .logo {
+    margin-left: 12%;
+
     a {
       background-color: black;
       color: white;
       font-size: 20px;
       text-transform: uppercase;
       padding: 10px;
-      text-decoration: none;
     }
+  }
+
+  .button {
+    background: $button-background;
+    padding: 8px 24px;
+    border: none;
+    border-radius: 3px;
+    color: $button-text-color;
   }
 
   .drop {
@@ -69,12 +63,12 @@
       margin: 0;
       display: flex;
       flex-direction: column;
-      background-color: #fff;
+      background-color: $dropdown-background;
       position: absolute;
       top: 100%;
       left: 0;
       width: 100%;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      box-shadow: $dropdown-shadow;
       visibility: hidden;
       opacity: 0;
       transition: visibility 0s, opacity 0.3s linear;
@@ -91,14 +85,14 @@
       }
 
       a {
-        color: #333;
+        color: $header-text-color;
         text-decoration: none;
       }
 
       button {
         background-color: transparent;
         border: none;
-        color: #333;
+        color: $header-text-color;
         padding: 10px;
         cursor: pointer;
       }
@@ -115,18 +109,28 @@
     display: none;
     background: none;
     border: none;
-    color: #333;
+    color: $header-text-color;
     cursor: pointer;
     font-size: 16px;
 
-    @media (max-width: 768px) {
+    @media (max-width: $mobile-breakpoint) {
       display: block;
     }
   }
 }
 
-@media (min-width: 768px) {
+@media (max-width: $mobile-breakpoint) {
+  .undrop {
+    display: none;
+  }
+
   .drop {
+    display: none;
+  }
+}
+
+@media (min-width: $mobile-breakpoint) {
+  .dropdownToggle {
     display: none;
   }
 }
