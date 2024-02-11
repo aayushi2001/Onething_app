@@ -1,0 +1,132 @@
+.header a {
+  color: #333;
+  margin-right: 20px;
+  text-decoration: none;
+}
+
+.header ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+
+.logo a {
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.logo {
+  margin-left: 12%;
+}
+
+.button {
+  background: #F2707C;
+  padding: 8px 24px;
+  border: none;
+  border-radius: 3px;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .undrop {
+    display: none;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  color: #333;
+  height: 60px;
+  padding: 0 30px;
+  font-family: 'Roboto', sans-serif;
+
+  .logo {
+    a {
+      background-color: black;
+      color: white;
+      font-size: 20px;
+      text-transform: uppercase;
+      padding: 10px;
+      text-decoration: none;
+    }
+  }
+
+  .drop {
+    position: relative;
+    width: 20%;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      background-color: #fff;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0s, opacity 0.3s linear;
+
+      &.dropdownOpen {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      li {
+        margin: 0;
+        padding: 10px;
+        text-align: center;
+      }
+
+      a {
+        color: #333;
+        text-decoration: none;
+      }
+
+      button {
+        background-color: transparent;
+        border: none;
+        color: #333;
+        padding: 10px;
+        cursor: pointer;
+      }
+
+      img {
+        padding: 10px;
+        width: 70px;
+        height: 50px;
+      }
+    }
+  }
+
+  .dropdownToggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    font-size: 16px;
+
+    @media (max-width: 768px) {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .drop {
+    display: none;
+  }
+}

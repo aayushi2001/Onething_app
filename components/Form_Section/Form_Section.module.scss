@@ -1,0 +1,66 @@
+.section {
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+
+    input {
+        border: none;
+        margin-bottom: 16px;
+        box-sizing: border-box;
+        display: block;
+        padding: 13px;
+        padding-right: 170px;
+        border-radius: 5px;
+    }
+}
+
+.form {
+    background-color: #BFE1FF;
+    width: 50%;
+}
+
+.inputs {
+    margin-top: 6%;
+    margin-bottom: 6%;
+    margin-left: 33%;
+}
+
+.content {
+    margin-left: 7.5%;
+    margin-top: 2%;
+}
+
+.mobileContent {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .section {
+        display: block;
+        padding: 20px;
+
+        input {
+
+            padding-right: 10px;
+            justify-content: center;
+            align-items: center;
+            margin-left: -9%;
+        }
+    }
+
+    .form {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .mobileContent {
+        display: block;
+    }
+
+    .mobileContentbutton {
+        color: black;
+    }
+
+    .content {
+        display: none;
+    }
+}
