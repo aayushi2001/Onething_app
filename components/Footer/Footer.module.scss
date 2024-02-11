@@ -1,78 +1,61 @@
-// Base colors
-$footer-background: #12193B;
-$footer-color: white;
-
-// Base typography
-$footer-font-family: 'Helvetica Neue', Arial, sans-serif;
-
-// Padding & spacing
-$footer-padding: 20px;
-$footer-subcontent-padding: 20px;
-$footer-subcontent-li-padding: 15px;
-$footer-subcontent-li-margin: 5px;
-$footer-subcontent-li-margin-right: 20px;
-
-// Button styles
-$button-background: #7C7EB5;
-$button-padding: 8px 40px;
-$button-border-radius: 46px;
-$button-font-size: 16px;
-
 .footer {
-  background: $footer-background;
-  color: $footer-color;
-  padding: $footer-padding 0;
-  font-family: $footer-font-family;
+  background: #12193B;
+  color: white;
+  padding: 20px 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
 
-  .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-    .mainContent {
-      margin-bottom: 20px;
-      text-align: center;
-    }
+.mainContent {
+  margin-bottom: 20px;
+  text-align: center;
+}
 
-    .subContent {
-      border-top: 1px solid whitesmoke;
-      display: flex;
-      justify-content: center;
-      padding: $footer-subcontent-padding;
+.subContent {
+  border-top: 1px solid whitesmoke;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
 
-      @media (max-width: 768px) {
-        display: block;
-        justify-content: left;
-        align-items: left;
-        width: 100%;
-      }
+.subContent ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-      ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
+.subContent li {
+  padding: 15px;
+  margin-bottom: 5px;
+  margin-right: 20px;
+}
 
-      li {
-        padding: $footer-subcontent-li-padding;
-        margin: $footer-subcontent-li-margin $footer-subcontent-li-margin-right;
-      }
-    }
+.buttonContainer {
+  margin-bottom: 10px;
+}
 
-    .buttonContainer {
-      margin-bottom: 10px;
+.button {
+  background: #7C7EB5;
+  border: none;
+  color: white;
+  padding: 8px 40px;
+  border-radius: 46px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  position: relative;
+}
 
-      .button {
-        background: $button-background;
-        border: none;
-        color: $footer-color;
-        padding: $button-padding;
-        border-radius: $button-border-radius;
-        text-align: center;
-        text-decoration: none;
-        font-size: $button-font-size;
-        position: relative;
-      }
-    }
+@media (max-width: 768px) {
+  .subContent {
+    display: block;
+    justify-content: left;
+    align-items: left;
+    width: 100%;
   }
 }

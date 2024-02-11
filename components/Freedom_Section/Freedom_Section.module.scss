@@ -1,98 +1,83 @@
-// Base colors
-$section-background: #8E7CB5;
-$text-color: white;
-
-// Base typography
-$font-family: 'Helvetica Neue', Arial, sans-serif;
-
-// Padding & spacing (for easier modification)
-$section-padding: var(--size-8);
-$content-margin-top: 2%;
-$content-margin-bottom: 4%;
-
-// Screen size breakpoint
-$mobile-breakpoint: 768px;
-
 .section {
   text-align: center;
-  background-color: $section-background;
-  font-family: $font-family;
-  padding: $section-padding 0;
+  background-color: #8E7CB5;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  padding: var(--size-8) 0;
   display: flex;
-  color: $text-color;
-
-  @media (max-width: $mobile-breakpoint) {
-    display: block;
-    justify-content: left;
-    align-items: left;
-  }
+  color: white;
 }
 
 .heading {
   margin-left: 13%;
-  margin-top: $content-margin-top;
+  margin-top: 2%;
   text-align: left;
-
-  @media (max-width: $mobile-breakpoint) {
-    font-size: 13px;
-    padding: 10px;
-    margin-left: 0;
-  }
 }
 
 .content {
   margin-left: 25%;
-  margin-top: $content-margin-top;
+  margin-top: 2%;
   text-align: left;
-  margin-bottom: $content-margin-bottom;
-
-  @media (max-width: $mobile-breakpoint) {
-    display: none;
-  }
+  margin-bottom: 4%;
 }
 
 .button {
-  color: $text-color;
+  color: white;
 }
 
 .mobileContent {
   display: none;
+}
 
-  @media (max-width: $mobile-breakpoint) {
+@media (max-width: 768px) {
+  .section {
+    display: block;
+    justify-content: left;
+    align-items: left;
+  }
+   .mobileContentOne{
+    margin: 0;
+    text-align: left;
+    margin-left: 15px;
+   }.mobileContentTwo{
+    
+      margin: 6px;
+      text-align: left;
+      margin-left: 15px;
+     
+   }
+  .heading {
+    font-size: 13px;
+    padding: 10px;
+    margin-left: 0;
+  }
+
+  .content {
+    display: none;
+  }
+
+  .mobileContent {
     display: block;
   }
-}
 
-.mobileContentOne,
-.mobileContentTwo {
-  margin: 0;
-  text-align: left;
-  margin-left: 15px;
-}
+  .dropdown {
+    width: 60%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 21px;
+    background-color: white;
+    color: #333;
+  }
 
-.mobileContentTwo {
-  margin-top: 6px;
-}
-
-.dropdown {
-  width: 60%;
-  padding: 8px;
-  margin-bottom: 16px;
-  border: 1px solid #ccc;
-  border-radius: 21px;
-  background-color: white;
-  color: #333;
-}
-
-.gobutton {
-  background: #4E3F6B;
-  padding: 8px 16px;
-  border: none;
-  border-radius: 21px;
-  margin-bottom: 13px;
-}
-
-.mobilebutton {
-  display: flex;
-  margin: 17px;
+  .gobutton {
+    background: #4E3F6B;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 21px;
+    margin-bottom: 13px;
+  }
+  .mobilebutton{
+    display: flex;
+    margin: 17px;
+  }
 }
